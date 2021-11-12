@@ -3,7 +3,6 @@
 #include <fstream>
 #include <Windows.h>
 #include <cmath>
-#include <iomanip>
 #include <vector>
 using namespace std;
 const float F_PI=3.141592;
@@ -17,7 +16,7 @@ void fsin(int lenght)
 	out.open("floatres.txt");
 	for (int i = 0; i < lenght; i++)
 	{
-		massin.push_back(10*sinf(2 * F_PI*i/period));
+		massin.push_back(1*sinf(2 * F_PI*i/period));
 		if (out.is_open())
 		{
 			out << massin[i] << endl;
