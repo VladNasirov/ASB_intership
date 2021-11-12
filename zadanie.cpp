@@ -11,14 +11,13 @@ const double D_PI=3.14159265358979323846;
 void fsin(int lenght)
 {
 	float f=-0.5;
-	float fstep = (abs(2*f)) / lenght;
+	float period = (1 / f) * 10;
 	vector<float>massin;
 	ofstream out;
 	out.open("floatres.txt");
 	for (int i = 0; i < lenght; i++)
 	{
-		massin.push_back(sinf(2 * F_PI*i*f));
-		f += fstep;
+		massin.push_back(10*sinf(2 * F_PI*i/period));
 		if (out.is_open())
 		{
 			out << massin[i] << endl;
@@ -28,16 +27,15 @@ void fsin(int lenght)
 	massin.clear();
 }
 void dsin(int lenght)
-{
+{	
 	float f = -0.5;
-	double fstep = abs(2 * f) / lenght;
+	float period = (1 / f) * 10;
 	vector<double>massin;
 	ofstream out;
 	out.open("doubleres.txt");
 	for (int i = 0; i < lenght; i++)
 	{
-		massin.push_back(sin(2 * D_PI * i*f));
-		f += fstep;
+		massin.push_back(1 * sinf(2 * F_PI * i / period));
 		if (out.is_open())
 		{
 			out << massin[i] << endl;
